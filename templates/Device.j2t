@@ -35,4 +35,4 @@
 	<path d="M185,90 A10,10 90 1 0 185,110" stroke="#000000" stroke-width="5" fill="none" />
 {%- elif Sign.Link1 == "Richt" -%}
 	<path d="M136,112 l0,-25 l-10,10 l0,-25 l-10,0 l20,0" stroke-width="5" stroke="#000000" fill="none" />
-{%- endif -%}	
+{%- endif -%}

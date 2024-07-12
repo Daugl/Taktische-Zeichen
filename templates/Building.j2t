@@ -1,4 +1,4 @@
-<path d="M9 63 l0 130 l238 0 l0 -130 l-119 -47 Z" fill="{{ Sign.ShadowColor }}" />
-<path d="M10 64 l0 128 l236 0 l0 -128.5 l-118 -46.5 l-118 46.5 Z" fill="{{ Sign.OutlineColor }}" />
-<rect x="16" y="70" width="224" height="116" fill="{{ Sign.BaseColor }}" />
-<path d="M26 64 L128 25 L230 64" fill="{{ Sign.BaseColor }}" />
+<path d="M9 63 l0 130 l238 0 l0 -130 l-119 -47 Z" fill="{{ Sign.StrokeColor }}" />
+<path d="M10 64 l0 128 l236 0 l0 -128.5 l-118 -46.5 l-118 46.5 Z" fill="{{ Sign.SecondaryColor }}" />
+<rect x="16" y="70" width="224" height="116" fill="{{ Sign.PrimaryColor }}" />
+<path d="M26 64 L128 25 L230 64" fill="{{ Sign.PrimaryColor }}" />
