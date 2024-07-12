@@ -1,0 +1,14 @@
+<ellipse fill="#000000" cx="128" cy="128" rx="69" ry="69" />
+{%- if Sign.CommandFacility is true -%}
+	<ellipse fill="#FFFF00" cx="128" cy="128" rx="64" ry="64" />
+{%- else -%}
+	<ellipse fill="#FFFFFF" cx="128" cy="128" rx="64" ry="64" />
+{%- endif -%}
+{%- if Sign.Logistics is true -%}
+	<path d="M72 160 l112 0 a50,-30 0 0 1 -112,0" fill="#000000" />
+{%- elif Sign.Command is true -%}
+	<path d="M72 96 l112 0 a50,30 0 0 0 -112,0" fill="#000000" />
+{%- endif -%}
+{%- if Sign.Stationary is true -%}
+	<path d="M10 80 L128 48 L246 80" stroke-width="5" stroke="#000000" fill="none" />
+{%- endif -%}

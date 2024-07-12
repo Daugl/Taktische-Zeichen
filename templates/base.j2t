@@ -1,19 +1,62 @@
+{%- set Sign = namespace(Type=false, Organisation=false, UnitSize=false, VehicleType=false, Leader=false,
+ SpecialFunction=false, Command=false, Logistics=false, Stationary=false, CommandFacility=false, Acute=false,
+ Presumed=false, Link1=false, Wireless1=false, Link2=false, Wireless2=false) -%}
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewbox="0 0 256 256">
-	<title>{% block title%}{% endblock title %}</title>
+	<title>{%- block title -%}{%- endblock title -%}</title>
 	{%- set fonts -%}
 	<defs>
 		<style type="text/css">
 		{%- include './fonts/fonts.j2' -%}
 		</style>
 	</defs>
-	{%- endset %}
-	{%- set body -%}
-	{%- block symbol -%}
-	{%- endblock symbol -%}
 	{%- endset -%}
-		{%- if '<text' in body  -%}
-			{{ fonts }}
-		{%- endif -%} 
-	{{ body }}
+{%- set body -%}
+	{%- block symbol -%}
+		{%- if Sign.CommandFacility is true -%}
+			{%- set ShadowColor = command.colorStroke -%} 
+			{%- set OutlineColor = command.colorSecondary -%} 
+			{%- set BaseColor = command.colorPrimary -%} 	
+		{%- elif Sign.Organisation == "thw" -%}
+			{%- set ShadowColor = thw.colorStroke -%} 
+			{%- set OutlineColor = thw.colorSecondary -%} 
+			{%- set BaseColor = thw.colorPrimary -%} 	
+		{%- elif Sign.Organisation == "feuerwehr" -%}
+			{%- set ShadowColor = feuerwehr.colorStroke -%} 
+			{%- set OutlineColor = feuerwehr.colorSecondary -%} 
+			{%- set BaseColor = feuerwehr.colorPrimary -%} 	
+		{%- elif Sign.Organisation == "bundeswehr" -%}
+			{%- set ShadowColor = bundeswehr.colorStroke -%} 
+			{%- set OutlineColor = bundeswehr.colorSecondary -%} 
+			{%- set BaseColor = bundeswehr.colorPrimary -%} 	
+		{%- elif Sign.Organisation == "katastrophenschutz" -%}
+			{%- set ShadowColor = katastrophenschutz.colorStroke -%} 
+			{%- set OutlineColor = katastrophenschutz.colorSecondary -%} 
+			{%- set BaseColor = katastrophenschutz.colorPrimary -%} 	
+		{%- elif Sign.Organisation == "kommunal" -%}
+			{%- set ShadowColor = kommunal.colorStroke -%} 
+			{%- set OutlineColor = kommunal.colorSecondary -%} 
+			{%- set BaseColor = kommunal.colorPrimary -%} 	 
+		{%- elif Sign.Organisation == "polizei" -%}
+			{%- set ShadowColor = polizei.colorStroke -%} 
+			{%- set OutlineColor = polizei.colorSecondary -%} 
+			{%- set BaseColor = polizei.colorPrimary -%} 	
+		{%- elif Sign.Organisation == "zoll" -%}
+			{%- set ShadowColor = zoll.colorStroke -%} 
+			{%- set OutlineColor = zoll.colorSecondary -%} 
+			{%- set BaseColor = zoll.colorPrimary -%} 
+		{%- else -%}
+			{%- set ShadowColor = undefined.colorStroke -%} 
+			{%- set OutlineColor = undefined.colorSecondary -%} 
+			{%- set BaseColor = undefined.colorPrimary -%} 
+		{%- endif -%}	
+		{%- if Sign.Type is not false -%}
+			{%- include "templates/" + Sign.Type + ".j2t" -%}
+		{%- endif -%}	
+	{%- endblock symbol -%}
+{%- endset -%}
+	{%- if '<text' in body -%}
+		{{ fonts }}
+	{%- endif -%} 
+{{ body }}
 </svg>
