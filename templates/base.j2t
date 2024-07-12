@@ -1,6 +1,7 @@
 {%- set Sign = namespace(Type=false, Organisation=false, UnitSize=false, VehicleType=false, Leader=false,
  SpecialFunction=false, Command=false, Logistics=false, Stationary=false, CommandFacility=false, Acute=false,
- Presumed=false, Link1=false, Wireless1=false, Link2=false, Wireless2=false) -%}
+ Presumed=false, Link1=false, Wireless1=false, Link2=false, Wireless2=false, ShadowColor=false, OutlineColor=false,
+ BaseColor=false) -%}
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewbox="0 0 256 256">
 	<title>{%- block title -%}{%- endblock title -%}</title>
@@ -13,43 +14,69 @@
 	{%- endset -%}
 {%- set body -%}
 	{%- block symbol -%}
-		{%- if Sign.CommandFacility is true -%}
-			{%- set ShadowColor = command.colorStroke -%} 
-			{%- set OutlineColor = command.colorSecondary -%} 
-			{%- set BaseColor = command.colorPrimary -%} 	
-		{%- elif Sign.Organisation == "thw" -%}
-			{%- set ShadowColor = thw.colorStroke -%} 
-			{%- set OutlineColor = thw.colorSecondary -%} 
-			{%- set BaseColor = thw.colorPrimary -%} 	
-		{%- elif Sign.Organisation == "feuerwehr" -%}
-			{%- set ShadowColor = feuerwehr.colorStroke -%} 
-			{%- set OutlineColor = feuerwehr.colorSecondary -%} 
-			{%- set BaseColor = feuerwehr.colorPrimary -%} 	
-		{%- elif Sign.Organisation == "bundeswehr" -%}
-			{%- set ShadowColor = bundeswehr.colorStroke -%} 
-			{%- set OutlineColor = bundeswehr.colorSecondary -%} 
-			{%- set BaseColor = bundeswehr.colorPrimary -%} 	
-		{%- elif Sign.Organisation == "katastrophenschutz" -%}
-			{%- set ShadowColor = katastrophenschutz.colorStroke -%} 
-			{%- set OutlineColor = katastrophenschutz.colorSecondary -%} 
-			{%- set BaseColor = katastrophenschutz.colorPrimary -%} 	
-		{%- elif Sign.Organisation == "kommunal" -%}
-			{%- set ShadowColor = kommunal.colorStroke -%} 
-			{%- set OutlineColor = kommunal.colorSecondary -%} 
-			{%- set BaseColor = kommunal.colorPrimary -%} 	 
-		{%- elif Sign.Organisation == "polizei" -%}
-			{%- set ShadowColor = polizei.colorStroke -%} 
-			{%- set OutlineColor = polizei.colorSecondary -%} 
-			{%- set BaseColor = polizei.colorPrimary -%} 	
-		{%- elif Sign.Organisation == "zoll" -%}
-			{%- set ShadowColor = zoll.colorStroke -%} 
-			{%- set OutlineColor = zoll.colorSecondary -%} 
-			{%- set BaseColor = zoll.colorPrimary -%} 
-		{%- else -%}
-			{%- set ShadowColor = undefined.colorStroke -%} 
-			{%- set OutlineColor = undefined.colorSecondary -%} 
-			{%- set BaseColor = undefined.colorPrimary -%} 
-		{%- endif -%}	
+		{%- if Sign.ShadowColor is false -%}
+			{%- if Sign.CommandFacility is true -%}
+				{%- set Sign.ShadowColor = command.colorStroke -%} 
+			{%- elif Sign.Organisation == "thw" -%}
+				{%- set Sign.ShadowColor = thw.colorStroke -%} 
+			{%- elif Sign.Organisation == "feuerwehr" -%}
+				{%- set Sign.ShadowColor = feuerwehr.colorStroke -%} 	
+			{%- elif Sign.Organisation == "bundeswehr" -%}
+				{%- set Sign.ShadowColor = bundeswehr.colorStroke -%} 	
+			{%- elif Sign.Organisation == "katastrophenschutz" -%}
+				{%- set Sign.ShadowColor = katastrophenschutz.colorStroke -%} 
+			{%- elif Sign.Organisation == "kommunal" -%}
+				{%- set Sign.ShadowColor = kommunal.colorStroke -%} 	 
+			{%- elif Sign.Organisation == "polizei" -%}
+				{%- set Sign.ShadowColor = polizei.colorStroke -%} 	
+			{%- elif Sign.Organisation == "zoll" -%}
+				{%- set Sign.ShadowColor = zoll.colorStroke -%} 
+			{%- else -%}
+				{%- set Sign.ShadowColor = undefined.colorStroke -%} 
+			{%- endif -%}	
+		{%- endif -%}
+		{%- if Sign.OutlineColor is false -%}
+			{%- if Sign.CommandFacility is true -%}
+				{%- set Sign.OutlineColor = command.colorSecondary -%} 
+			{%- elif Sign.Organisation == "thw" -%}
+				{%- set Sign.OutlineColor = thw.colorSecondary -%} 
+			{%- elif Sign.Organisation == "feuerwehr" -%}
+				{%- set Sign.OutlineColor = feuerwehr.colorSecondary -%} 
+			{%- elif Sign.Organisation == "bundeswehr" -%}
+				{%- set Sign.OutlineColor = bundeswehr.colorSecondary -%} 
+			{%- elif Sign.Organisation == "katastrophenschutz" -%}
+				{%- set Sign.OutlineColor = katastrophenschutz.colorSecondary -%} 
+			{%- elif Sign.Organisation == "kommunal" -%}
+				{%- set Sign.OutlineColor = kommunal.colorSecondary -%} 
+			{%- elif Sign.Organisation == "polizei" -%}
+				{%- set Sign.OutlineColor = polizei.colorSecondary -%} 
+			{%- elif Sign.Organisation == "zoll" -%}
+				{%- set Sign.OutlineColor = zoll.colorSecondary -%} 
+			{%- else -%}
+				{%- set Sign.OutlineColor = undefined.colorSecondary -%} 
+			{%- endif -%}	
+		{%- endif -%}
+		{%- if Sign.BaseColor is false -%}
+			{%- if Sign.CommandFacility is true -%}
+				{%- set Sign.BaseColor = command.colorPrimary -%} 	
+			{%- elif Sign.Organisation == "thw" -%}
+				{%- set Sign.BaseColor = thw.colorPrimary -%} 	
+			{%- elif Sign.Organisation == "feuerwehr" -%}
+				{%- set Sign.BaseColor = feuerwehr.colorPrimary -%} 	
+			{%- elif Sign.Organisation == "bundeswehr" -%}
+				{%- set Sign.BaseColor = bundeswehr.colorPrimary -%} 	
+			{%- elif Sign.Organisation == "katastrophenschutz" -%}
+				{%- set Sign.BaseColor = katastrophenschutz.colorPrimary -%} 	
+			{%- elif Sign.Organisation == "kommunal" -%}
+				{%- set Sign.aseColor = kommunal.colorPrimary -%} 	 
+			{%- elif Sign.Organisation == "polizei" -%}
+				{%- set Sign.BaseColor = polizei.colorPrimary -%} 	
+			{%- elif Sign.Organisation == "zoll" -%}
+				{%- set Sign.BaseColor = zoll.colorPrimary -%} 
+			{%- else -%}
+				{%- set Sign.BaseColor = undefined.colorPrimary -%} 
+			{%- endif -%}	
+		{%- endif -%}
 		{%- if Sign.Type is not false -%}
 			{%- include "templates/" + Sign.Type + ".j2t" -%}
 		{%- endif -%}	
