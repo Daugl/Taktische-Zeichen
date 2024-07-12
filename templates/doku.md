@@ -1,6 +1,9 @@
 Nutzung der Templates am Beispiel eines Feuerwehrbootes ZBV:
 
 {% extends "templates/base.j2t" %}
+{%- block title -%}
+	Feuerwehrboot ZBV
+{%- endblock title -%}
 {%- block symbol -%}
 	{%- set Sign.Type = "Vehicle" -%}
 	{%- set Sign.VehicleType = "Boot" -%}
@@ -9,7 +12,8 @@ Nutzung der Templates am Beispiel eines Feuerwehrbootes ZBV:
 	<text style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 48px; text-anchor: middle;" fill="#FFFFFF" x="128" y="153">ZBV</text>
 {%- endblock symbol -%}
 
-Zuerst werden die grundlegenden Variablen
+Der Block 'title' setzt den svg-title des Zeichens.
+Danach werden die grundlegenden Variablen
 	Sign.Type
 	Sign.VehicleType
 	Sign.Organisation
@@ -18,10 +22,35 @@ Mit dem Aufruf von super() wird das Parent Template (base.j2t) gerendert.
 Die für das Zeichen spezifischen Texte und Symbole werden danach hinzugefügt (Textzug "ZBV")
 
 
+Auch ist es Möglich ein bestehndes Zeichen als Template zu benutzen. Man nehme folgendes Zeichen für ein generisches Feuerwehrboot:
+
+{% extends "templates/base.j2t" %}
+{%- block title -%}
+	Feuerwehrboot
+{%- endblock title -%}
+{%- block symbol -%}
+	{%- set Sign.Type = "Vehicle" -%}
+	{%- set Sign.VehicleType = "Boot" -%}
+	{%- set Sign.Organisation = "feuerwehr" -%}
+	{{ super() }}
+{%- endblock symbol -%}
+
+und erstelle ein neues Zeichen für das Feuerwehrboot ZBV:
+
+{% extends "symbols/ymbols/Feuerwehr_Fahrzeuge/Feuerwehrboot.j2" %}
+{%- block title -%}
+	ZBV
+{%- endblock title -%}
+{%- block symbol -%}
+	{{ super() }}
+	<text style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 48px; text-anchor: middle;" fill="#FFFFFF" x="128" y="153">ZBV</text>
+{%- endblock symbol -%}
+
+
 Beschreibung der Variablen in base.j2t:
 
 Sign.Type (string)
-	Die Art des Zeichens. Diese Variable muss gesetzt sein.
+	Die Art des Zeichens. Diese Variable muss immer gesetzt sein.
 	Das dazugehörige Template muss als .j2t Datei im Ordner templates vorhanden sein.
 	Zulässige Werte sind:
 		Action			(Maßnahme)
@@ -43,6 +72,8 @@ Sign.Organisation (string)
 	betreibt bzw. 
 		die der Person
 	angehörig ist.
+	Setzt dadurch indirekt auch die entsprechenden Farben für Einheiten, Fahrzeuge und Gebäude (Überschreiben durch
+	[Sign.PrimaryColor], [Sign.SecondaryColor] und [Sign.StrokeColor] möglich).
 	Zulässige Werte sind:
 		thw
 		feuerwehr
@@ -68,7 +99,7 @@ Sign.UnitSize (string)
 		Verband 3
 
 Sign.VehicleType (string)
-	Die Art des Fahrzeuges
+	Die Art des Fahrzeuges, diese Variable muss bei [Sign.Type] "Vehicle" gesetzt sein.
 	Zulässige Werte sind:
 		Anhänger			(Anhänger)	
 		Kette				(Kettenfahrzeuge)
