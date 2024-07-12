@@ -1,7 +1,6 @@
-{%- set Sign = namespace(Type=false, Organisation=false, UnitSize=false, VehicleType=false, Leader=false,
- SpecialFunction=false, Command=false, Logistics=false, Stationary=false, CommandFacility=false, Acute=false,
- Presumed=false, Link1=false, Wireless1=false, Link2=false, Wireless2=false, StrokeColor=false, SecondaryColor=false,
- PrimaryColor=false) -%}
+{%- set Sign = namespace(Type=false, Organisation=false, UnitSize=false, VehicleType=false, SpecialFunction=false, 
+Command=false, Logistics=false, Stationary=false, CommandFacility=false, Acute=false, Presumed=false, 
+Link1=false, Wireless1=false, Link2=false, Wireless2=false, StrokeColor=false, SecondaryColor=false, PrimaryColor=false) -%}
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewbox="0 0 256 256">
 	<title>{%- block title -%}{%- endblock title -%}</title>
