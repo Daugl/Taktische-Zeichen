@@ -1,37 +1,37 @@
-<path d="M62,128 L128,62 L194,128 L128,194 Z" fill="{{ Sign.StrokeColor }}" />
-<path d="M65,128 L128,65 L191,128 L128,191 Z" fill="{{ Sign.SecondaryColor }}" />
+<path d="M62,128 L128,62 L194,128 L128,194 Z" fill="{{ ColorStroke[Sign.Organisation] }}" />
+<path d="M65,128 L128,65 L191,128 L128,191 Z" fill="{{ ColorSecondary[Sign.Organisation] }}" />
 {%- if Sign.UnitSize is not false or Sign.Command is true -%}
-	<path d="M72,128 L112,88 L144,88 L184,128 L128,184 Z" fill="{{ Sign.PrimaryColor }}" /> 
+	<path d="M72,128 L112,88 L144,88 L184,128 L128,184 Z" fill="{{ ColorPrimary[Sign.Organisation] }}" /> 
 {%- elif Sign.SpecialFunction is true -%}
-	<path d="M72,128 L112,88 L144,88 L184,128 L128,184 Z" fill="{{ Sign.PrimaryColor }}" /> 
-	<path d="M116,84 L128,72 L140,84 Z" fill="{{ Sign.PrimaryColor }}" /> 
+	<path d="M72,128 L112,88 L144,88 L184,128 L128,184 Z" fill="{{ ColorPrimary[Sign.Organisation] }}" /> 
+	<path d="M116,84 L128,72 L140,84 Z" fill="{{ ColorPrimary[Sign.Organisation] }}" /> 
 {%- else -%}
-	<path d="M72,128 L128,72 L184,128 L128,184 Z" fill="{{ Sign.PrimaryColor }}" />
+	<path d="M72,128 L128,72 L184,128 L128,184 Z" fill="{{ ColorPrimary[Sign.Organisation] }}" />
 {%- endif -%}
 {%- if Sign.UnitSize == "Trupp" -%}
-	<ellipse cx="128" cy="44" rx="10" ry="10" fill="{{ Sign.StrokeColor }}" />
+	<ellipse cx="128" cy="44" rx="10" ry="10" fill="{{ ColorStroke[Sign.Organisation] }}" />
 {%- elif Sign.UnitSize == "Gruppe" -%}
-	<ellipse cx="100" cy="44" rx="10" ry="10" fill="{{ Sign.StrokeColor }}" />
-	<ellipse cx="156" cy="44" rx="10" ry="10" fill="{{ Sign.StrokeColor }}" />
+	<ellipse cx="100" cy="44" rx="10" ry="10" fill="{{ ColorStroke[Sign.Organisation] }}" />
+	<ellipse cx="156" cy="44" rx="10" ry="10" fill="{{ ColorStroke[Sign.Organisation] }}" />
 {%- elif Sign.UnitSize == "Staffel" -%}
-	<ellipse cx="128" cy="44" rx="10" ry="10" fill="{{ Sign.StrokeColor }}" />
-	<ellipse cx="128" cy="20" rx="10" ry="10" fill="{{ Sign.StrokeColor }}" />
+	<ellipse cx="128" cy="44" rx="10" ry="10" fill="{{ ColorStroke[Sign.Organisation] }}" />
+	<ellipse cx="128" cy="20" rx="10" ry="10" fill="{{ ColorStroke[Sign.Organisation] }}" />
 {%- elif Sign.UnitSize == "Zug" -%}	
-	<ellipse cx="100" cy="44" rx="10" ry="10" fill="{{ Sign.StrokeColor }}" />
-	<ellipse cx="128" cy="44" rx="10" ry="10" fill="{{ Sign.StrokeColor }}" />
-	<ellipse cx="156" cy="44" rx="10" ry="10" fill="{{ Sign.StrokeColor }}" />
+	<ellipse cx="100" cy="44" rx="10" ry="10" fill="{{ ColorStroke[Sign.Organisation] }}" />
+	<ellipse cx="128" cy="44" rx="10" ry="10" fill="{{ ColorStroke[Sign.Organisation] }}" />
+	<ellipse cx="156" cy="44" rx="10" ry="10" fill="{{ ColorStroke[Sign.Organisation] }}" />
 {%- elif Sign.UnitSize == "Bereitschaft" or Sign.UnitSize == "Verband 1" -%}
-	<rect x="123" y="24" width="10" height="36" fill="{{ Sign.StrokeColor}}" />
+	<rect x="123" y="24" width="10" height="36" fill="{{ ColorStroke[Sign.Organisation]}}" />
 {%- elif Sign.UnitSize == "Abteilung" or Sign.UnitSize == "Verband 2" -%}
-	<rect x="103" y="24" width="10" height="36" fill="{{ Sign.StrokeColor}}" />
-	<rect x="143" y="24" width="10" height="36" fill="{{ Sign.StrokeColor}}" />
+	<rect x="103" y="24" width="10" height="36" fill="{{ ColorStroke[Sign.Organisation]}}" />
+	<rect x="143" y="24" width="10" height="36" fill="{{ ColorStroke[Sign.Organisation]}}" />
 {%- elif Sign.UnitSize == "Großverband" or Sign.UnitSize == "Verband 3" -%}
-	<rect x="103" y="24" width="10" height="36" fill="{{ Sign.StrokeColor}}" />
-	<rect x="123" y="24" width="10" height="36" fill="{{ Sign.StrokeColor}}" />
-	<rect x="143" y="24" width="10" height="36" fill="{{ Sign.StrokeColor}}" />
+	<rect x="103" y="24" width="10" height="36" fill="{{ ColorStroke[Sign.Organisation]}}" />
+	<rect x="123" y="24" width="10" height="36" fill="{{ ColorStroke[Sign.Organisation]}}" />
+	<rect x="143" y="24" width="10" height="36" fill="{{ ColorStroke[Sign.Organisation]}}" />
 {%- endif -%}
 {#	Zugtrupp Kreise
-	<ellipse cx="114" cy="100" rx="5" ry="5" fill="{{ Sign.SecondaryColor }}" />
-	<ellipse cx="128" cy="100" rx="5" ry="5" fill="{{ Sign.SecondaryColor }}" />
-	<ellipse cx="142" cy="100" rx="5" ry="5" fill="{{ Sign.SecondaryColor }}" />
+	<ellipse cx="114" cy="100" rx="5" ry="5" fill="{{ ColorSecondary[Sign.Organisation] }}" />
+	<ellipse cx="128" cy="100" rx="5" ry="5" fill="{{ ColorSecondary[Sign.Organisation] }}" />
+	<ellipse cx="142" cy="100" rx="5" ry="5" fill="{{ ColorSecondary[Sign.Organisation] }}" />
 	#}

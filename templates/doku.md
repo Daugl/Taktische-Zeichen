@@ -72,8 +72,7 @@ Sign.Organisation (string)
 	betreibt bzw. 
 		die der Person
 	angehörig ist.
-	Setzt dadurch indirekt auch die entsprechenden Farben für Einheiten, Fahrzeuge und Gebäude (Überschreiben durch
-	[Sign.PrimaryColor], [Sign.SecondaryColor] und [Sign.StrokeColor] möglich).
+	Setzt dadurch indirekt auch die entsprechenden Farben für Einheiten, Fahrzeuge und Gebäude 
 	Zulässige Werte sind:
 		thw
 		feuerwehr
@@ -163,21 +162,3 @@ Sign.Link2 (string)
 Sign.Wireless2 (bool)
 	Ist die IuK-verbindung von [Sign.Link2] drahtlos?
 	Darf für den Wert 'Richt' nicht gesetzt werden.
-
-Sign.StrokeColor (string)
-	Überschreibt die Farbe des Schattens bzw. der äußersten Umrandung eines Zeichens die sonst durch [Sign.Organisation] vorgegeben wäre (Beispiel: Schwarz Kreise und Schatten bei einem THW-Fahrzeug).
-	Zulässige Werte:
-		- Bevorzugt: 6-stellige Hexadezimal RGB_Werte mit führendem #
-		- Alle gültigen Werte für den <color> CSS data type
-	
-Sign.SecondaryColor (string)
-	Überschreibt die Farbe der Umrandung und der Schrift eines Zeichens die sonst durch [Sign.Organisation] vorgegeben wäre (Beispiel: Weiße Schrift und Umrandung bei einem THW-Fahrzeug)
-	Zulässige Werte:
-		- Bevorzugt: 6-stellige Hexadezimal RGB_Werte mit führendem #
-		- Alle gültigen Werte für den <color> CSS data type
-
-Sign.PrimaryColor (string)
-	Überschreibt die Grundfarbe eines Zeichens die sonst durch [Sign.Organisation] vorgegeben wäre (Beispiel: Blaue Füllung bei einem THW-Fahrzeug)
-	Zulässige Werte:
-		- Bevorzugt: 6-stellige Hexadezimal RGB_Werte mit führendem #
-		- Alle gültigen Werte für den <color> CSS data type

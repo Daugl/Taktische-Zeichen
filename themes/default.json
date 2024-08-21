@@ -1,47 +1,35 @@
 {
-    "thw": {
-        "colorPrimary": "#003399",
-        "colorSecondary": "#FFFFFF",
-        "colorStroke": "#000000"
+    "colorPrimary": {
+        "thw": "#003399",
+        "feuerwehr": "#FF0000",
+        "bundeswehr": "#996633",
+        "katastrophenschutz": "#DF6711",
+        "kommunal": "#E26E0E",
+        "polizei": "#13A538",
+        "zoll": "#13A538",
+        "command": "#FFFF00",
+        "undefined": "#FFFFFF"
     },
-    "feuerwehr": {
-        "colorPrimary": "#FF0000",
-        "colorSecondary": "#FFFFFF",
-        "colorStroke": "#000000"
+    "colorSecondary": {
+        "thw": "#FFFFFF",
+        "feuerwehr": "#FFFFFF",
+        "bundeswehr": "#FFFFFF",
+        "katastrophenschutz": "#000000",
+        "kommunal": "#000000",
+        "polizei": "#FFFFFF",
+        "zoll": "#FFFFFF",
+        "command": "#000000",
+        "undefined": "#000000"
     },
-    "bundeswehr": {
-        "colorPrimary": "#996633",
-        "colorSecondary": "#FFFFFF",
-        "colorStroke": "#000000"
-    },
-    "katastrophenschutz": {
-        "colorPrimary": "#DF6711",
-        "colorSecondary": "#000000",
-        "colorStroke": "#000000"
-    },
-    "kommunal": {
-        "colorPrimary": "#E26E0E",
-        "colorSecondary": "#000000",
-        "colorStroke": "#000000"
-    },
-    "polizei": {
-        "colorPrimary": "#13A538",
-        "colorSecondary": "#FFFFFF",
-        "colorStroke": "#000000"
-    },
-    "zoll": {
-        "colorPrimary": "#13A538",
-        "colorSecondary": "#FFFFFF",
-        "colorStroke": "#000000"
-    },
-    "command": {
-        "colorPrimary": "#FFFF00",
-        "colorSecondary": "#000000",
-        "colorStroke": "#000000"
-    },
-    "undefined": {
-        "colorPrimary": "#FFFFFF",
-        "colorSecondary": "#000000",
-        "colorStroke": "#000000"
+    "colorStroke": {
+        "thw": "#000000",
+        "feuerwehr": "#000000",
+        "bundeswehr": "#000000",
+        "katastrophenschutz": "#000000",
+        "kommunal": "#000000",
+        "polizei": "#000000",
+        "zoll": "#000000",
+        "command": "#000000",
+        "undefined": "#000000"
     }
 }

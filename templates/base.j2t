@@ -1,6 +1,6 @@
 {%- set Sign = namespace(Type=false, Organisation=false, UnitSize=false, VehicleType=false, SpecialFunction=false, 
 Command=false, Logistics=false, Stationary=false, CommandFacility=false, Acute=false, Presumed=false, 
-Link1=false, Wireless1=false, Link2=false, Wireless2=false, StrokeColor=false, SecondaryColor=false, PrimaryColor=false) -%}
+Link1=false, Wireless1=false, Link2=false, Wireless2=false) -%}
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewbox="0 0 256 256">
 	<title>{%- block title -%}{%- endblock title -%}</title>
@@ -12,70 +12,7 @@ Link1=false, Wireless1=false, Link2=false, Wireless2=false, StrokeColor=false, S
 	</defs>
 	{%- endset -%}
 {%- set body -%}
-	{%- block symbol -%}
-		{%- if Sign.StrokeColor is false -%}
-			{%- if Sign.CommandFacility is true -%}
-				{%- set Sign.StrokeColor = command.colorStroke -%} 
-			{%- elif Sign.Organisation == "thw" -%}
-				{%- set Sign.StrokeColor = thw.colorStroke -%} 
-			{%- elif Sign.Organisation == "feuerwehr" -%}
-				{%- set Sign.StrokeColor = feuerwehr.colorStroke -%} 	
-			{%- elif Sign.Organisation == "bundeswehr" -%}
-				{%- set Sign.StrokeColor = bundeswehr.colorStroke -%} 	
-			{%- elif Sign.Organisation == "katastrophenschutz" -%}
-				{%- set Sign.StrokeColor = katastrophenschutz.colorStroke -%} 
-			{%- elif Sign.Organisation == "kommunal" -%}
-				{%- set Sign.StrokeColor = kommunal.colorStroke -%} 	 
-			{%- elif Sign.Organisation == "polizei" -%}
-				{%- set Sign.StrokeColor = polizei.colorStroke -%} 	
-			{%- elif Sign.Organisation == "zoll" -%}
-				{%- set Sign.StrokeColor = zoll.colorStroke -%} 
-			{%- else -%}
-				{%- set Sign.StrokeColor = undefined.colorStroke -%} 
-			{%- endif -%}	
-		{%- endif -%}
-		{%- if Sign.SecondaryColor is false -%}
-			{%- if Sign.CommandFacility is true -%}
-				{%- set Sign.SecondaryColor = command.colorSecondary -%} 
-			{%- elif Sign.Organisation == "thw" -%}
-				{%- set Sign.SecondaryColor = thw.colorSecondary -%} 
-			{%- elif Sign.Organisation == "feuerwehr" -%}
-				{%- set Sign.SecondaryColor = feuerwehr.colorSecondary -%} 
-			{%- elif Sign.Organisation == "bundeswehr" -%}
-				{%- set Sign.SecondaryColor = bundeswehr.colorSecondary -%} 
-			{%- elif Sign.Organisation == "katastrophenschutz" -%}
-				{%- set Sign.SecondaryColor = katastrophenschutz.colorSecondary -%} 
-			{%- elif Sign.Organisation == "kommunal" -%}
-				{%- set Sign.SecondaryColor = kommunal.colorSecondary -%} 
-			{%- elif Sign.Organisation == "polizei" -%}
-				{%- set Sign.SecondaryColor = polizei.colorSecondary -%} 
-			{%- elif Sign.Organisation == "zoll" -%}
-				{%- set Sign.SecondaryColor = zoll.colorSecondary -%} 
-			{%- else -%}
-				{%- set Sign.SecondaryColor = undefined.colorSecondary -%} 
-			{%- endif -%}	
-		{%- endif -%}
-		{%- if Sign.PrimaryColor is false -%}
-			{%- if Sign.CommandFacility is true -%}
-				{%- set Sign.PrimaryColor = command.colorPrimary -%} 	
-			{%- elif Sign.Organisation == "thw" -%}
-				{%- set Sign.PrimaryColor = thw.colorPrimary -%} 	
-			{%- elif Sign.Organisation == "feuerwehr" -%}
-				{%- set Sign.PrimaryColor = feuerwehr.colorPrimary -%} 	
-			{%- elif Sign.Organisation == "bundeswehr" -%}
-				{%- set Sign.PrimaryColor = bundeswehr.colorPrimary -%} 	
-			{%- elif Sign.Organisation == "katastrophenschutz" -%}
-				{%- set Sign.PrimaryColor = katastrophenschutz.colorPrimary -%} 	
-			{%- elif Sign.Organisation == "kommunal" -%}
-				{%- set Sign.aseColor = kommunal.colorPrimary -%} 	 
-			{%- elif Sign.Organisation == "polizei" -%}
-				{%- set Sign.PrimaryColor = polizei.colorPrimary -%} 	
-			{%- elif Sign.Organisation == "zoll" -%}
-				{%- set Sign.PrimaryColor = zoll.colorPrimary -%} 
-			{%- else -%}
-				{%- set Sign.PrimaryColor = undefined.colorPrimary -%} 
-			{%- endif -%}	
-		{%- endif -%}
+	{%- block symbol -%}	
 		{%- if Sign.Type is not false -%}
 			{%- include "templates/" + Sign.Type + ".j2t" -%}
 		{%- endif -%}	
