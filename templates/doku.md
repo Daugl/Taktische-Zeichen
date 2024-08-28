@@ -81,6 +81,8 @@ Sign.Organisation (string)
 		kommunal
 		polizei
 		zoll
+		command
+		undefined
 
 Sign.UnitSize (string)
 	Die Größe der Einheit, oder
