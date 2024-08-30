@@ -1,0 +1,10 @@
+{% extends "templates/base.j2t" %}
+{%- block title -%}
+	Versorgungsstelle
+{%- endblock title -%}
+{%- block symbol -%}
+	{%- set Sign.Type = "Facility" -%}
+    {%- set Sign.CommandFacility = True -%}
+    {%- set Sign.Logistics = True -%}
+	{{ super() }}
+{%- endblock symbol -%}
