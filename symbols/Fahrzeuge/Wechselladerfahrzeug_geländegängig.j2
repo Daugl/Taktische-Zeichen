@@ -1,0 +1,10 @@
+{% extends "templates/base.j2t" %}
+{%- block title -%}
+	Wechselladerfahrzeug geländegängig
+{%- endblock title -%}
+{%- block symbol -%}
+	{%- set Sign.Type = "Vehicle" -%}
+	{%- set Sign.VehicleType = "Wechsel Gelände" -%}
+	{%- set Sign.Organisation = "undefined" -%}
+	{{ super() }}
+{%- endblock symbol -%}
