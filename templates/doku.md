@@ -99,6 +99,45 @@ Sign.UnitSize (string)
 		Großverband
 		Verband 3
 
+Sign.UnitTasks (list of strings)
+	Die Fachaufgaben, die diese Einheit definiert.
+	Einige Zeichen sind kombinierbar, Z.B. ABC & Erkundung
+	Zulässige Werte sind:
+		Brandbekämpfung
+		Höhenrettung
+		Wasserversorgung
+		Technische Hilfe
+		Heben
+		Bergen
+		Räumen
+		Entschärfung
+		Sprengen
+		Transport
+		Beleuchtung
+		Luftfahrzeuge
+		Wasserfahrzeuge
+		Rettungshunde
+		Wasserrettung
+		Pumpen
+		Deichverteidigung
+		ABC
+		Dekon
+		Dekon Wasser
+		Sanität
+		Arzt
+		Betreuung
+		Unterbringung
+		Verpflegung
+		Betriebsstoffe
+		Trinkwasser
+		Brauchwasser
+		Elektrizität
+		Veterinär
+		Schlachten
+		IuK
+		Erkundung
+		Warnen
+
 Sign.VehicleType (string)
 	Die Art des Fahrzeuges, diese Variable muss bei [Sign.Type] "Vehicle" gesetzt sein.
 	Zulässige Werte sind:
