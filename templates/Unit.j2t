@@ -36,6 +36,7 @@
 {%- endif -%#}
 {% for Task in Sign.UnitTasks %}
 	{%- if Task == "Brandbekämpfung" -%}
+		<path d="M11 128 L245 128 M156 128 L241 69 M156 128 L241 187" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="10" fill="none" />
 	{%- elif Task == "Höhenrettung" -%}
 	{%- elif Task == "Wasserversorgung" -%}
 	{%- elif Task == "Technische Hilfe" -%}
