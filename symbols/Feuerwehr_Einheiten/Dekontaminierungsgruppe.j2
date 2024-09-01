@@ -1,6 +1,6 @@
 {% extends "templates/base.j2t" %}
 {%- block title -%}
-	Dekontaminierungsgruppe Gerät
+	Dekontaminierungsgruppe
 {%- endblock title -%}
 {%- block symbol -%}
 	{%- set Sign.Type = "Unit" -%}
@@ -8,5 +8,4 @@
 	{%- set Sign.UnitTasks = ["ABC","Dekon"] -%}
 	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
-	<text style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 32px; text-anchor: middle;" fill="{{ colorSecondary[Sign.Organisation] }}" x="128" y="182">G</text>
 {%- endblock symbol -%}
