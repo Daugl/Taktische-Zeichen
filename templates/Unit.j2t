@@ -82,5 +82,8 @@
 	{%- elif Task == "Sprechfunk" -%}
 		<path d="M155 80 l72 0" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
 		<path d="M155 88 l12 12 l12 -12 l12 12 l12 -12 l12 12 l12 -12" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="3" fill="none" />
+	{%- elif Task == "Fernsprechbau" -%}
+		<path d="M20 160 l90 0" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="7" fill="none" />
+		<path d="M210 140 l0 -48 m-10 -10 a10 10 0 1 0 20 0" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
 {%- endif -%}
 {% endfor %}
