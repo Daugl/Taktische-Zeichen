@@ -70,6 +70,8 @@
 	{%- elif Task == "Trinkwasser" -%}
 	{%- elif Task == "Brauchwasser" -%}
 	{%- elif Task == "Elektrizität" -%}
+	{%- elif Task == "Instandhaltung" -%}
+		<path d="M44,138 a20,20 0 0,0 0,-40 M64,118 L192,118 m20,20 a20,20 0 0,1 0,-40" fill="none" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" />
 	{%- elif Task == "Veterinär" -%}
 	{%- elif Task == "Schlachten" -%}
 	{%- elif Task == "IuK" -%}
