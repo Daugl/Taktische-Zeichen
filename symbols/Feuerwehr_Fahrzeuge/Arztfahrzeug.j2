@@ -1,0 +1,8 @@
+{% extends "symbols/Feuerwehr_Fahrzeuge/Sanitätsfahrzeug.j2" %}
+{%- block title -%}
+	Arztfahrzeug
+{%- endblock title -%}
+{%- block symbol -%}
+	{{ super() }}
+	<path d="M108,160 l40,0" fill="none" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation]}}" />
+{%- endblock symbol -%}

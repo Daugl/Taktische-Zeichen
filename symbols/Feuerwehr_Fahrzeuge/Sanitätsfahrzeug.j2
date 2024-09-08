@@ -1,10 +1,11 @@
 {% extends "templates/base.j2t" %}
 {%- block title -%}
-	Feuerwehrboot
+	Sanitätsfahrzeug
 {%- endblock title -%}
 {%- block symbol -%}
 	{%- set Sign.Type = "Vehicle" -%}
-	{%- set Sign.VehicleType = "Boot" -%}
+	{%- set Sign.VehicleType = "Kraft" -%}
 	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
+	<path d="M16,128 l224,0 M128,186 l0,-98" fill="none" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" />
 {%- endblock symbol -%}

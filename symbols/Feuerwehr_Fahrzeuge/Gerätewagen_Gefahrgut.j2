@@ -1,34 +1,16 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewbox="0 0 256 256">
-	<title>Gerätewagen Gefahrgut</title>
-	<defs>
-		<style type="text/css">
-		{% include './fonts/fonts.j2' %}
-		</style>
-	</defs>
-<<<<<<< HEAD
-	<path d="M10,64 L10,192 L246,192 L246,64 Q128,100 10,64 Z" fill="#000000" stroke="none" />
-	<path d="M11,65 L11,191 L245,191 L245,65 Q128,101 11,65 Z" fill="#FFFFFF" stroke="none"/>
-	<path d="M16,72 L16,186 L240,186 L240,72 Q128,106 16,72 Z" fill="#FF0000" stroke="none"/>
-=======
-	<path d="M10,64 L10,192 L246,192 L246,64 Q128,100 10,64 Z" fill="{{ feuerwehr.colorPrimary }}" stroke-width="10" stroke="{{ feuerwehr.colorSecondary }}" clip-path="url(#symbol)" />
->>>>>>> master
+{% extends "templates/base.j2t" %}
+{%- block title -%}
+	Gerätewagen Gefahrgut
+{%- endblock title -%}
+{%- block symbol -%}
+	{%- set Sign.Type = "Vehicle" -%}
+	{%- set Sign.VehicleType = "Gelände" -%}
+	{%- set Sign.Organisation = "feuerwehr" -%}
+	{{ super() }}
+	<text style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 32px; text-anchor: left; " fill="{{ colorSecondary[Sign.Organisation] }}" x="30" y="145">GW-G</text>
 	<g transform="scale(0.5), translate(220,128)">
-		<ellipse cx="78" cy="112" rx="20" ry="20" fill="{{ feuerwehr.colorSecondary }}" />
-		<ellipse cx="178" cy="112" rx="20" ry="20" fill="{{ feuerwehr.colorSecondary }}" />
-		<path d="M88 102 L188 174 M168 102 L68 174" stroke="{{ feuerwehr.colorSecondary }}" stroke-width="10" fill="none" />
+		<ellipse cx="78" cy="112" rx="20" ry="20" fill="{{ colorSecondary[Sign.Organisation] }}" />
+		<ellipse cx="178" cy="112" rx="20" ry="20" fill="{{ colorSecondary[Sign.Organisation] }}" />
+		<path d="M88 102 L188 174 M168 102 L68 174" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="10" fill="none" />
 	</g>
-<<<<<<< HEAD
-	<text style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 32px; text-anchor: left; " fill="#FFFFFF" x="30" y="145">GW-G</text>
-	<ellipse cx="40" cy="210" rx="10" ry="10" stroke="#000000" fill="none" stroke-width="5" />
-	<ellipse cx="128" cy="210" rx="10" ry="10" stroke="#000000" fill="none" stroke-width="5" />
-	<ellipse cx="216" cy="210" rx="10" ry="10" stroke="#000000" fill="none" stroke-width="5" />
-</svg>
-=======
-	<text style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 32px; text-anchor: left; " fill="{{ feuerwehr.colorSecondary }}" x="30" y="145">GW-G</text>
-	<ellipse cx="40" cy="210" rx="10" ry="10" stroke="{{ feuerwehr.colorStroke }}" fill="none" stroke-width="5" />
-	<ellipse cx="128" cy="210" rx="10" ry="10" stroke="{{ feuerwehr.colorStroke }}" fill="none" stroke-width="5" />
-	<ellipse cx="216" cy="210" rx="10" ry="10" stroke="{{ feuerwehr.colorStroke }}" fill="none" stroke-width="5" />
-	<path d="M10,64 L10,192 L246,192 L246,64 Q128,100 10,64 Z" fill="none" stroke-width="1" stroke="{{ feuerwehr.colorStroke }}" />
-</svg>
->>>>>>> master
+{%- endblock symbol -%}
