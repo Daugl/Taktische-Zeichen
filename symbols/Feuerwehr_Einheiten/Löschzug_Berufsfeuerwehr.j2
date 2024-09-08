@@ -3,10 +3,6 @@
 	Löschzug der Berufsfeuerwehr
 {%- endblock title -%}
 {%- block symbol -%}
-	{%- set Sign.Type = "Unit" -%}
-	{%- set Sign.UnitSize = "Zug" -%}
-	{%- set Sign.UnitTasks = ["Brandbekämpfung"] -%}
-	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
 	<text x="22" y="100" style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 32px;" fill="{{ colorSecondary[Sign.Organisation] }}">BF</text>
 {%- endblock symbol -%}
