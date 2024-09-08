@@ -67,7 +67,7 @@
 	{%- elif Task == "Unterbringung" -%}
 	{%- elif Task == "Verpflegung" -%}
 	{%- elif Task == "Betriebsstoffe" -%}
-	{%- elif Task == "Trinkwasser" -%}
+		<path d="M124 145 l0 -40 L110 85 l36 0 l-14 20 l0 40" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="3" fill="none" />	{%- elif Task == "Trinkwasser" -%}
 	{%- elif Task == "Brauchwasser" -%}
 	{%- elif Task == "Elektrizität" -%}
 	{%- elif Task == "Instandhaltung" -%}
