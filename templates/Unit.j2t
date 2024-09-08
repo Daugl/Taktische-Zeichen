@@ -79,5 +79,8 @@
 	{%- elif Task == "Warnen" -%}
 	{%- elif Task == "UAV" -%}
 		<path d="M204.61,110.63a11.82,11.82,0,0,1-6.15,8.73L131.39,155a7.33,7.33,0,0,1-6.9,0L57.42,119.36a11.89,11.89,0,0,1-6.14-8.73l-1.07-7.38a1.11,1.11,0,0,1,1.44-1.2L127.94,128l76.31-25.91a1.1,1.1,0,0,1,1.44,1.2Z" style="fill: {{ colorSecondary[Sign.Organisation] }}"/>
-	{%- endif -%}
+	{%- elif Task == "Sprechfunk" -%}
+		<path d="M155 80 l72 0" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
+		<path d="M155 88 l12 12 l12 -12 l12 12 l12 -12 l12 12 l12 -12" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="3" fill="none" />
+{%- endif -%}
 {% endfor %}
