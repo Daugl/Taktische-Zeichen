@@ -5,7 +5,7 @@
 {%- block symbol -%}
 	{%- set Sign.Type = "Vehicle" -%}
 	{%- set Sign.VehicleType = "Kraft" -%}
-	{%- set Sign.VehicleTask = "Arzt" -%}
+	{%- set Sign.Tasks = ["Arzt"] -%}
 	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
 	<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: start; font-size: 32px;" fill="{{ colorSecondary[Sign.Organisation] }}" x="22" y="120">NEF</text>

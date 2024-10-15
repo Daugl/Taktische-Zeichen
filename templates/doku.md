@@ -99,9 +99,9 @@ Sign.UnitSize (string)
 		Großverband
 		Verband 3
 
-Sign.UnitTasks (list of strings)
-	Die Fachaufgaben, die diese Einheit definiert.
-	Einige Zeichen sind kombinierbar, Z.B. ABC & Erkundung
+Sign.Tasks (list of strings)
+	Die Fachaufgaben, die diese Einheit, Fahrzeug oder Person definiert.
+	Einige Zeichen sind kombinierbar, Z.B. ABC & Erkundung oder müssen kombiniert werden wie Arzt mit Sanität
 	Zulässige Werte sind:
 		Brandbekämpfung
 		Höhenrettung

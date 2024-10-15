@@ -5,7 +5,7 @@
 {%- block symbol -%}
 	{%- set Sign.Type = "Unit" -%}
 	{%- set Sign.UnitSize = "Gruppe" -%}
-	{%- set Sign.UnitTasks = ["ABC","Dekon"] -%}
+	{%- set Sign.Tasks = ["ABC","Dekon"] -%}
 	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
 	<text style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 32px; text-anchor: middle;" fill="{{ colorSecondary[Sign.Organisation] }}" x="128" y="182">G</text>

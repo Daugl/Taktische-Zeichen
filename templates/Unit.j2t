@@ -34,7 +34,7 @@
 	<ellipse cx="128" cy="86" rx="10" ry="10" fill="{{ colorSecondary[Sign.Organisation] }}" />
 	<ellipse cx="192" cy="86" rx="10" ry="10" fill="{{ colorSecondary[Sign.Organisation] }}" />
 {%- endif -%#}
-{% for Task in Sign.UnitTasks %}
+{% for Task in Sign.Tasks %}
 	{%- if Task == "Brandbekämpfung" -%}
 		<path d="M11 128 L245 128 M156 128 L241 69 M156 128 L241 187" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="10" fill="none" />
 	{%- elif Task == "Höhenrettung" -%}
