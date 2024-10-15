@@ -46,6 +46,8 @@
 	{%- elif Task == "Entschärfung" -%}
 	{%- elif Task == "Sprengen" -%}
 	{%- elif Task == "Transport" -%}
+		<ellipse cx="128" cy="128" rx="32" ry="32" fill="none" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" />
+		<path d="M96,128 l64,0 M128,96 l0,64 M105,105 l46,46 M105,151 l46,-46" fill="none" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}"/>
 	{%- elif Task == "Beleuchtung" -%}
 	{%- elif Task == "Luftfahrzeuge" -%}
 	{%- elif Task == "Wasserfahrzeuge" -%}
@@ -68,16 +70,20 @@
 		<ellipse cx="33" cy="138" rx="8" ry="8" fill="{{ colorSecondary[Sign.Organisation] }}" />
 		<ellipse cx="81" cy="138" rx="8" ry="8" fill="{{ colorSecondary[Sign.Organisation] }}" />
 	{%- elif Task == "Sanität" -%}
+		<path d="M128,64 l0,128 M10,128 l236,0" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
 	{%- elif Task == "Arzt" -%}
+		<path d="M100,160 l56,0" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" fill="none" />
 	{%- elif Task == "Betreuung" -%}
+		<path d="M12,190 L128,68 L244,190" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
 	{%- elif Task == "Unterbringung" -%}
 	{%- elif Task == "Verpflegung" -%}
+		<path d="M128,140 l32,-16 a32 32 0 1 0 0,32 Z" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
 	{%- elif Task == "Betriebsstoffe" -%}
 		<path d="M124 145 l0 -40 L110 85 l36 0 l-14 20 l0 40" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="3" fill="none" />	{%- elif Task == "Trinkwasser" -%}
 	{%- elif Task == "Brauchwasser" -%}
 	{%- elif Task == "Elektrizität" -%}
 	{%- elif Task == "Instandhaltung" -%}
-		<path d="M44,138 a20,20 0 0,0 0,-40 M64,118 L192,118 m20,20 a20,20 0 0,1 0,-40" fill="none" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" />
+		<path d="M44,148 a20,20 0 0,0 0,-40 M64,128 L192,128 m20,20 a20,20 0 0,1 0,-40" fill="none" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" />
 	{%- elif Task == "Veterinär" -%}
 		<path d="M59 80 l25 0 L128 176 L172 80 l25 0" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" fill="none" />
 	{%- elif Task == "Schlachten" -%}
