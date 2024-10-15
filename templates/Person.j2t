@@ -35,3 +35,16 @@
 	<ellipse cx="128" cy="100" rx="5" ry="5" fill="{{ colorSecondary[Sign.Organisation] }}" />
 	<ellipse cx="142" cy="100" rx="5" ry="5" fill="{{ colorSecondary[Sign.Organisation] }}" />
 	#}
+{% for Task in Sign.Tasks %}
+	{%- if Task == "Betreuung" -%}
+		<path d="M96,160 l32,-32 l32,32" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
+	{%- elif Task == "Sanität" -%}
+		<path d="M64,128 l128,0 M128,64 l0,128" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
+	{%- elif Task == "Material" -%}
+		<path d="M94,146 a10,10 0 0,0 0,-20 M104,136 L152,136 m10,10 a10,10 0 0,1 0,-20" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
+	{%- elif Task == "Verpflegung" -%}
+		<path d="M128,130 l20,-10 a20 20 0 1 0 0,20 Z" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
+	{%- elif Task == "Brandbekämpfung" -%}
+		<path d="M69,128 l119,0 M144,128 l23,-23 M144,128 l23,23" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" fill="none" />
+	{%- endif -%}
+{% endfor %}

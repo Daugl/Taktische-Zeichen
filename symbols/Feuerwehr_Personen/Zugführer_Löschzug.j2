@@ -4,9 +4,9 @@
 {%- endblock title -%}
 {%- block symbol -%}
 	{%- set Sign.Type = "Person" -%}
+	{%- set Sign.Tasks = ["Brandbekämpfung"] -%}
 	{%- set Sign.Command = true -%}
 	{%- set Sign.UnitSize = "Zug" -%}
 	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
-	<path d="M69,128 l119,0 M144,128 l23,-23 M144,128 l23,23" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" fill="none" />
 {%- endblock symbol -%}
