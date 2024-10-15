@@ -8,6 +8,7 @@
         "polizei": "#13A538",
         "zoll": "#13A538",
         "command": "#FFFF00",
+        "rettung": "#FFFFFFF",
         "undefined": "#FFFFFF"
     },
     "colorSecondary": {
@@ -19,6 +20,7 @@
         "polizei": "#FFFFFF",
         "zoll": "#FFFFFF",
         "command": "#000000",
+        "rettung": "#000000",
         "undefined": "#000000"
     },
     "colorStroke": {
@@ -30,6 +32,7 @@
         "polizei": "#000000",
         "zoll": "#000000",
         "command": "#000000",
+        "rettung": "#000000",
         "undefined": "#000000"
     }
 }
