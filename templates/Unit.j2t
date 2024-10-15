@@ -61,6 +61,12 @@
 		<path d="M185,161 m7,7 l-15,0 m15,0 l0,-15 l-15,15 Z" fill="{{ colorSecondary[Sign.Organisation] }}" transform="rotate(-10,188,164)" />
 		<path d="M71,161 m-7,7 l15,0 l-15,-15 Z" fill="{{ colorSecondary[Sign.Organisation] }}" transform="rotate(10,68,164)" />
 	{%- elif Task == "Dekon Wasser" -%}
+	{%- elif Task == "Dekon Veterinär" -%}
+		<path d="M34,134 l40,40 M80,134 l-40,40" stroke-width="6" stroke="{{ colorSecondary[Sign.Organisation] }}" fill="none" />
+		<path d="M44,178 l-8,0 l0,-8 Z" fill="{{ colorSecondary[Sign.Organisation] }}" />
+		<path d="M70,178 l8,0 l0,-8 Z" fill="{{ colorSecondary[Sign.Organisation] }}" />
+		<ellipse cx="33" cy="138" rx="8" ry="8" fill="{{ colorSecondary[Sign.Organisation] }}" />
+		<ellipse cx="81" cy="138" rx="8" ry="8" fill="{{ colorSecondary[Sign.Organisation] }}" />
 	{%- elif Task == "Sanität" -%}
 	{%- elif Task == "Arzt" -%}
 	{%- elif Task == "Betreuung" -%}
@@ -73,7 +79,10 @@
 	{%- elif Task == "Instandhaltung" -%}
 		<path d="M44,138 a20,20 0 0,0 0,-40 M64,118 L192,118 m20,20 a20,20 0 0,1 0,-40" fill="none" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" />
 	{%- elif Task == "Veterinär" -%}
+		<path d="M59 80 l25 0 L128 176 L172 80 l25 0" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" fill="none" />
 	{%- elif Task == "Schlachten" -%}
+		<path d="M25 180 l30 0 l-15 -25 l-15 25 Z" stroke-width="3" stroke="{{ colorSecondary[Sign.Organisation] }}" fill="none" />
+		<path d="M25 154 l80 0" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" fill="none" />
 	{%- elif Task == "IuK" -%}
 		<path d="M12 66 l116 94 l0 -64 l116 94" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
 	{%- elif Task == "Erkundung" -%}
