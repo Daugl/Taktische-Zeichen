@@ -1,8 +1,11 @@
-{% extends "symbols/Feuerwehr_Fahrzeuge/Sanitätsfahrzeug.j2" %}
+{% extends "templates/base.j2t" %}
 {%- block title -%}
 	Arztfahrzeug
 {%- endblock title -%}
 {%- block symbol -%}
+	{%- set Sign.Type = "Vehicle" -%}
+	{%- set Sign.VehicleType = "Kraft" -%}
+	{%- set Sign.VehicleTask = "Arzt" -%}
+	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
-	<path d="M108,160 l40,0" fill="none" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation]}}" />
 {%- endblock symbol -%}

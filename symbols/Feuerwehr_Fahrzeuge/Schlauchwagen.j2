@@ -1,8 +1,12 @@
-{% extends "symbols/Feuerwehr_Fahrzeuge/Löschfahrzeug.j2" %}
+{% extends "templates/base.j2t" %}
 {%- block title -%}
 	Schlauchwagen
 {%- endblock title -%}
 {%- block symbol -%}
+	{%- set Sign.Type = "Vehicle" -%}
+	{%- set Sign.VehicleType = "Gelände" -%}
+	{%- set Sign.VehicleTask = "Löschen" -%}
+	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
 	<path d="M25,108 a10,10 180 1 1 20,0 a10,10 180 1 0 20,0 a10,10 180 1 1 20,0 a10,10 180 1 0 20,0 a10,10 180 1 1 20,0" stroke="{{ colorSecondary[Sign.Organisation] }}" stroke-width="5" fill="none" />
 {%- endblock symbol -%}

@@ -1,4 +1,4 @@
-{%- set Sign = namespace(Type=false, Organisation=false, UnitSize=false, UnitTasks=[], VehicleType=false, SpecialFunction=false, 
+{%- set Sign = namespace(Type=false, Organisation=false, UnitSize=false, UnitTasks=[], VehicleType=false, VehicleTask=false, SpecialFunction=false, 
 Command=false, Logistics=false, Stationary=false, CommandFacility=false, Acute=false, Presumed=false, 
 Link1=false, Wireless1=false, Link2=false, Wireless2=false) -%}
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">

@@ -1,8 +1,12 @@
-{% extends "symbols/Feuerwehr_Fahrzeuge/Löschfahrzeug.j2" %}
+{% extends "templates/base.j2t" %}
 {%- block title -%}
 	LF 24-50
 {%- endblock title -%}
 {%- block symbol -%}
+	{%- set Sign.Type = "Vehicle" -%}
+	{%- set Sign.VehicleType = "Gelände" -%}
+	{%- set Sign.VehicleTask = "Löschen" -%}
+	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
 	<text style="font-family: 'Roboto Slab'; font-weight: bold; font-size: 24px;" fill="{{ colorSecondary[Sign.Organisation] }}" x="22" y="120">LF 24/50</text>
 {%- endblock symbol -%}

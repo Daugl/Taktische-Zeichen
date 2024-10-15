@@ -5,7 +5,7 @@
 {%- block symbol -%}
 	{%- set Sign.Type = "Vehicle" -%}
 	{%- set Sign.VehicleType = "Gelände" -%}
+	{%- set Sign.VehicleTask = "Löschen" -%}
 	{%- set Sign.Organisation = "feuerwehr" -%}
 	{{ super() }}
-	<path d="M16,128 L240,128 M156,128 L242,186 M156,128 L242,70" fill="none" stroke-width="5" stroke="{{ colorSecondary[Sign.Organisation] }}" />
 {%- endblock symbol -%}
