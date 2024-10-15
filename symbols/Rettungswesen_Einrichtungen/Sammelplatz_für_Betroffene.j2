@@ -1,12 +1,12 @@
 {% extends "templates/base.j2t" %}
 {%- block title -%}
-	Patientenablage
+	Sammelplatz für Betroffene
 {%- endblock title -%}
 {%- block symbol -%}
 	{%- set Sign.Organisation = "undefined" -%}
 	{%- set Sign.Type = "Facility" -%}
 	{{ super() }}
-	<path d="M64,128 l128,0 M128,64 l0,128 M96,96 l64,0" stroke-width="5" stroke="#000000" fill="none" />
+	<path d="M128,64 l0,74 M96,96 l64,0 M72,164 l56,-28 l56,28" stroke-width="5" stroke="#000000" fill="none" />
 	<path d="M96,96 l0,-10 l-10,10 l10,10 Z" />
 	<path d="M160,96 l0,-10 l10,10 l-10,10 Z" />
 {%- endblock symbol -%}
