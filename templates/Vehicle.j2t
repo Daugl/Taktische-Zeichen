@@ -31,10 +31,16 @@
 	<path d="M10,64 L246,64 A118,118 180 0 1 10,64 Z" fill="{{ colorStroke[Sign.Organisation] }}" />
 	<path d="M11,65 L245,65 A116,115 180 0 1 11,65 Z" fill="{{ colorSecondary[Sign.Organisation] }}" />
 	<path d="M16,70 L240,70 A106,100 180 0 1 16,70 Z" fill="{{ colorPrimary[Sign.Organisation] }}" />
+	{%- if Sign.Organisation == "thw" -%}
+		<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: end;" fill="{{ colorStroke[Sign.Organisation] }}" x="236" y="160">THW</text>
+	{%- endif -%}
 {%- else -%}
 	<path d="M10,64 L10,192 L246,192 L246,64 Q128,100 10,64 Z" fill="{{ colorStroke[Sign.Organisation] }}" />
 	<path d="M11,65 L11,191 L245,191 L245,65 Q128,101 11,65 Z" fill="{{ colorSecondary[Sign.Organisation] }}" />
 	<path d="M16,72 L16,186 L240,186 L240,72 Q128,106 16,72 Z" fill="{{ colorPrimary[Sign.Organisation] }}" />
+	{%- if Sign.Organisation == "thw" -%}
+		<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: end;" fill="{{ colorSecondary[Sign.Organisation] }}" x="236" y="180">THW</text>
+	{%- endif -%}
 {%- endif -%}
 {% for Task in Sign.Tasks %}
 	{%- if Task == "Sanität" -%}

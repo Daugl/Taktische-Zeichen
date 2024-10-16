@@ -2,10 +2,19 @@
 <rect x="10" y="64" width="236" height="128" fill="{{ colorSecondary[Sign.Organisation] }}" />
 {%- if Sign.Logistics is true -%}
 	<rect x="16" y="70" width="224" height="96" fill="{{ colorPrimary[Sign.Organisation] }}" />
+	{%- if Sign.Organisation == "thw" -%}
+		<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: end;" fill="{{ colorSecondary[Sign.Organisation] }}" x="236" y="160">THW</text>
+	{%- endif -%}
 {%- elif Sign.Command is true -%}
 	<rect x="16" y="90" width="224" height="96" fill="{{ colorPrimary[Sign.Organisation] }}" />
+	{%- if Sign.Organisation == "thw" -%}
+		<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: end;" fill="{{ colorSecondary[Sign.Organisation] }}" x="236" y="180">THW</text>
+	{%- endif -%}
 {%- else -%}
 	<rect x="16" y="70" width="224" height="116" fill="{{ colorPrimary[Sign.Organisation] }}" />
+	{%- if Sign.Organisation == "thw" -%}
+		<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: end;" fill="{{ colorSecondary[Sign.Organisation] }}" x="236" y="180">THW</text>
+	{%- endif -%}
 {%- endif -%}
 {%- if Sign.UnitSize == "Trupp" -%}
 	<ellipse cx="128" cy="48" rx="10" ry="10" fill="{{ colorStroke[Sign.Organisation] }}" />	

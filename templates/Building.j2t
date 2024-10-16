@@ -2,3 +2,6 @@
 <path d="M10 64 l0 128 l236 0 l0 -128.5 l-118 -46.5 l-118 46.5 Z" fill="{{ colorSecondary[Sign.Organisation] }}" />
 <rect x="16" y="70" width="224" height="116" fill="{{ colorPrimary[Sign.Organisation] }}" />
 <path d="M26 64 L128 25 L230 64" fill="{{ colorPrimary[Sign.Organisation] }}" />
+{%- if Sign.Organisation == "thw" -%}
+		<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: end;" fill="{{ colorSecondary[Sign.Organisation] }}" x="236" y="180">THW</text>
+{%- endif -%}
