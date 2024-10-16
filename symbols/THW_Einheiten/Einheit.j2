@@ -1,0 +1,9 @@
+{% extends "templates/base.j2t" %}
+{%- block title -%}
+	Einheit
+{%- endblock title -%}
+{%- block symbol -%}
+	{%- set Sign.Type = "Unit" -%}
+	{%- set Sign.Organisation = "thw" -%}
+	{{ super() }}
+{%- endblock symbol -%}
