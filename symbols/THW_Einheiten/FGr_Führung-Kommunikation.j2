@@ -3,6 +3,7 @@
 	Fachgruppe Führung-Kommunikation
 {%- endblock title -%}
 {%- block symbol -%}
+	{%- set Sign.Command = true -%}
 	{{ super() }}
 	<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: middle; font-size: 48px; " fill="{{ colorSecondary[Sign.Organisation] }}" x="128" y="145">FK</text>
 {%- endblock symbol -%}

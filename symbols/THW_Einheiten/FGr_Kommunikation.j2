@@ -1,0 +1,8 @@
+{% extends "symbols/THW_Einheiten/Gruppe.j2" %}
+{%- block title -%}
+	Fachgruppe Kommunikation
+{%- endblock title -%}
+{%- block symbol -%}
+	{{ super() }}
+	<text style="font-family: 'Roboto Slab'; font-weight: bold; text-anchor: middle; font-size: 48px; " fill="{{ colorSecondary[Sign.Organisation] }}" x="128" y="145">K</text>
+{%- endblock symbol -%}
